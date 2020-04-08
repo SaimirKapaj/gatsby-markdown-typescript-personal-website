@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Redux-Toolkit`,
-    description: `Gatsby, Redux-Toolkit, Typescript, Styled Components & Tailwind CSS starter`,
+    title: `John Doe`,
+    description: `Gatsby Personal Website Starter, using Typescript, Styled Components and Tailwindcss.`,
     author: `Saimir Kapaj`
   },
   plugins: [
@@ -19,7 +19,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-redux-toolkit-typescript-starter`,
+        name: `gatsby-personal-website-starter`,
         short_name: `starter`,
         start_url: `/`,
         background_color: `#667EEA`,

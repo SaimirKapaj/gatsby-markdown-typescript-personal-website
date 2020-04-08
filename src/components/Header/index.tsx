@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import MainNav from './MainNav';
-import SwitchThemeMode from './SwitchThemeMode';
 
 import { HeaderWrapper, Title } from './styles';
 
@@ -21,7 +20,6 @@ const Header: React.FC<Props> = ({ siteTitle }) => (
       <Title>{siteTitle}</Title>
     </Link>
     <MainNav />
-    <SwitchThemeMode />
   </HeaderWrapper>
 );
 

@@ -1,12 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
-import { ThemeType } from 'assets/styles/theme';
+import { colors } from 'assets/styles/variables';
 import tw from 'tailwind.macro';
 
-export default createGlobalStyle<{ theme: ThemeType }>`
+export default createGlobalStyle`
   body {
     margin: 0;
-    color: ${({ theme }) => theme.colors.secondary};
-    background: ${({ theme }) => theme.colors.primary};
+    color: ${colors.black};
+    background: ${colors.white};
   }
 
   a {
