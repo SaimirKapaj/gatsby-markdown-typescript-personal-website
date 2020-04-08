@@ -1,15 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
-import { colors } from 'assets/styles/variables';
 import tw from 'tailwind.macro';
 
 export default createGlobalStyle`
   body {
-    margin: 0;
-    color: ${colors.black};
-    background: ${colors.white};
+    ${tw`m-0 text-gray-900 bg-gray-100`};
   }
 
   a {
-    ${tw`text-indigo-500 hover:text-indigo-600`};
+    ${tw`text-indigo-600 hover:text-indigo-700`};
   }
 `;
