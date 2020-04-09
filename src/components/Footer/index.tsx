@@ -1,11 +1,11 @@
 import React from 'react';
-import { FooterWrapper } from './styles';
+import * as Styled from './styles';
 
 /**
  * Footer component
  */
 const Footer = () => (
-  <FooterWrapper>
+  <Styled.Footer>
     <div>
       Built with{' '}
       <a href="https://www.gatsbyjs.org" rel="noreferrer noopener" target="_blank">
@@ -20,7 +20,7 @@ const Footer = () => (
     >
       GitHub
     </a>{' '}
-  </FooterWrapper>
+  </Styled.Footer>
 );
 
 export default Footer;

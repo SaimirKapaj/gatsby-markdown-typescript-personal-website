@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
 
-import { Nav, NavItem, ToogleNavButton } from './styles';
+import * as Styled from './styles';
 
-interface NavItem {
+interface MainNavItem {
   title: string;
   slug: string;
 }
 
-const navItems: NavItem[] = [
+const mainNavItems: MainNavItem[] = [
   {
     title: 'About Me',
     slug: '/'
@@ -32,20 +31,18 @@ const MainNav: React.FC = () => {
 
   return (
     <>
-      <Nav open={open}>
-        {navItems.map((item, index) => (
-          <NavItem key={`nav-item-${index}`}>
-            <Link to={item.slug} activeClassName="active">
-              {item.title}
-            </Link>
-          </NavItem>
+      <Styled.MainNav open={open}>
+        {mainNavItems.map((item, index) => (
+          <Styled.MainNavItem key={`nav-item-${index}`} to={item.slug} activeClassName="active">
+            {item.title}
+          </Styled.MainNavItem>
         ))}
-      </Nav>
-      <ToogleNavButton open={open} onClick={() => setOpen(!open)}>
+      </Styled.MainNav>
+      <Styled.ToogleMainNav open={open} onClick={() => setOpen(!open)}>
         <span />
         <span />
         <span />
-      </ToogleNavButton>
+      </Styled.ToogleMainNav>
     </>
   );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-import { Link, Image, Text } from './styles';
+import * as Styled from './styles';
 
 /**
  * Logo component
@@ -26,12 +26,12 @@ const Logo = () => {
   `);
 
   return (
-    <Link to="/">
-      <Image>
+    <Styled.Logo to="/">
+      <Styled.Image>
         <Img fluid={placeholderImage.childImageSharp.fluid} alt={site.siteMetadata.title} />
-      </Image>
-      <Text>{site.siteMetadata.title}</Text>
-    </Link>
+      </Styled.Image>
+      <Styled.Text>{site.siteMetadata.title}</Styled.Text>
+    </Styled.Logo>
   );
 };
 

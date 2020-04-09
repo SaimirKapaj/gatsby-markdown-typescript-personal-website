@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
 
-export const HeaderBg = styled.div`
+export const Header = styled.header`
   ${tw`bg-indigo-100`};
 `;
 

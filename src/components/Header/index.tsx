@@ -3,7 +3,7 @@ import React from 'react';
 import MainNav from './MainNav';
 import Logo from './Logo';
 
-import { HeaderBg, HeaderWrapper } from './styles';
+import * as Styled from './styles';
 
 interface Props {
   siteTitle: string;
@@ -15,12 +15,12 @@ interface Props {
  * @param {Props} props
  */
 const Header: React.FC<Props> = ({ siteTitle }) => (
-  <HeaderBg>
-    <HeaderWrapper>
+  <Styled.Header>
+    <Styled.HeaderWrapper>
       <Logo />
       <MainNav />
-    </HeaderWrapper>
-  </HeaderBg>
+    </Styled.HeaderWrapper>
+  </Styled.Header>
 );
 
 Header.defaultProps = {

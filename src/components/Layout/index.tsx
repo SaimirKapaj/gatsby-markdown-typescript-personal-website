@@ -1,11 +1,12 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 
 import 'assets/styles/global.css';
 import GlobalStyles from 'assets/styles/globalStyles';
-import { LayoutWrapper, MainWrapper } from './styles';
+import * as Styled from './styles';
 
 interface Props {
   children: React.ReactNode;
@@ -30,11 +31,11 @@ const Layout: React.FC<Props> = ({ children }) => {
   return (
     <>
       <GlobalStyles />
-      <LayoutWrapper>
+      <Styled.Layout>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <MainWrapper>{children}</MainWrapper>
+        <Styled.MainWrapper>{children}</Styled.MainWrapper>
         <Footer />
-      </LayoutWrapper>
+      </Styled.Layout>
     </>
   );
 };

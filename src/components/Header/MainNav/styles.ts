@@ -1,28 +1,25 @@
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
+import { Link } from 'gatsby';
 
-interface NavProps {
+interface MainNavProps {
   open: boolean;
 }
 
-export const Nav = styled.nav<NavProps>`
+export const MainNav = styled.nav<MainNavProps>`
   ${tw`flex flex-col sm:flex-row bg-indigo-100 sm:w-auto w-full order-last sm:order-none my-4 sm:my-0`};
   ${({ open }) => (open ? 'flex' : tw`hidden`)};
 `;
 
-export const NavItem = styled.span`
-  ${tw`mr-8 mt-3 sm:mt-0`};
+export const MainNavItem = styled(Link)`
+  ${tw`mr-8 mt-3 sm:mt-0 text-gray-900 hover:text-indigo-600 text-base font-light`};
 
-  a {
-    ${tw`text-gray-900 hover:text-indigo-600 text-base font-light`};
-  }
-
-  a.active {
+  &.active {
     ${tw`text-indigo-600`};
   }
 `;
 
-export const ToogleNavButton = styled.button<NavProps>`
+export const ToogleMainNav = styled.button<MainNavProps>`
   ${tw`flex flex-col items-center justify-center cursor-pointer w-6 h-5`};
   outline: none !important;
 
