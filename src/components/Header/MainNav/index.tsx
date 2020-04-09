@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
 
-import Icon from 'utils/Icon';
-
-import { MainNavWrapper, Nav, NavItem, OpenNavButton, CloseNavButton } from './styles';
+import { Nav, NavItem, ToogleNavButton } from './styles';
 
 interface NavItem {
   title: string;
@@ -12,19 +10,19 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   {
-    title: 'Home',
+    title: 'About Me',
     slug: '/'
   },
   {
-    title: 'About',
-    slug: '/about/'
+    title: 'Resume',
+    slug: '/resume/'
   },
   {
     title: 'Blog',
     slug: '/blog/'
   },
   {
-    title: 'Contact Us',
+    title: 'Contact Me',
     slug: '/contact/'
   }
 ];
@@ -33,14 +31,8 @@ const MainNav: React.FC = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <MainNavWrapper>
-      <OpenNavButton onClick={() => setOpen(true)}>
-        <Icon icon="bars" />
-      </OpenNavButton>
+    <>
       <Nav open={open}>
-        <CloseNavButton onClick={() => setOpen(false)}>
-          <Icon icon="times" />
-        </CloseNavButton>
         {navItems.map((item, index) => (
           <NavItem key={`nav-item-${index}`}>
             <Link to={item.slug} activeClassName="active">
@@ -49,7 +41,12 @@ const MainNav: React.FC = () => {
           </NavItem>
         ))}
       </Nav>
-    </MainNavWrapper>
+      <ToogleNavButton open={open} onClick={() => setOpen(!open)}>
+        <span />
+        <span />
+        <span />
+      </ToogleNavButton>
+    </>
   );
 };
 

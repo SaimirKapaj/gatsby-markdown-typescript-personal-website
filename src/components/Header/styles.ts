@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
 
-export const HeaderWrapper = styled.div`
-  ${tw`bg-indigo-100 flex flex-wrap items-center justify-between w-full p-5`};
+export const HeaderBg = styled.div`
+  ${tw`bg-indigo-100`};
 `;
 
-export const Title = styled.h3`
-  ${tw`text-lg sm:text-xl font-semibold text-gray-800`};
+export const HeaderWrapper = styled.div`
+  ${tw`flex flex-wrap items-center max-w-screen-md mx-auto p-5 py-3`};
 `;

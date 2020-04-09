@@ -5,39 +5,44 @@ interface NavProps {
   open: boolean;
 }
 
-export const MainNavWrapper = styled.div`
-  ${tw`flex items-center justify-between`};
-`;
-
 export const Nav = styled.nav<NavProps>`
-  ${tw`fixed sm:relative flex flex-col sm:flex-row w-full sm:w-auto left-0 top-0 h-screen sm:h-auto justify-center items-center bg-indigo-100 `};
-  ${({ open }) => !open && tw`hidden sm:flex`};
+  ${tw`flex flex-col sm:flex-row bg-indigo-100 sm:w-auto w-full order-last sm:order-none my-4 sm:my-0`};
+  ${({ open }) => (open ? 'flex' : tw`hidden`)};
 `;
 
 export const NavItem = styled.span`
-  ${tw`m-2`};
+  ${tw`mr-8 mt-3 sm:mt-0`};
 
   a {
-    ${tw`p-2 pr-3 pl-3 text-gray-900 hover:text-indigo-600 text-base font-light`};
+    ${tw`text-gray-900 hover:text-indigo-600 text-base font-light`};
   }
 
   a.active {
-    ${tw`text-white bg-indigo-600 rounded-full`};
+    ${tw`text-indigo-600`};
   }
 `;
 
-export const OpenNavButton = styled.button`
-  ${tw`flex items-center justify-center sm:hidden w-8 p-2`};
+export const ToogleNavButton = styled.button<NavProps>`
+  ${tw`flex flex-col items-center justify-center cursor-pointer w-6 h-5`};
+  outline: none !important;
 
-  svg {
-    ${tw`fill-current`};
+  span {
+    ${tw`bg-gray-900 inline-block w-6 h-px`};
+    transition: 0.2s;
+
+    &:first-child {
+      ${({ open }) => (open ? tw`-mb-px` : tw`mb-2 `)};
+      transform: ${({ open }) => (open ? 'rotate(45deg)' : 'none')};
+    }
+
+    &:last-child {
+      ${({ open }) => (open ? tw`-mt-px` : tw`mt-2`)};
+      transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'none')};
+    }
+
+    &:nth-child(2) {
+      ${({ open }) => (open ? tw`opacity-0` : tw`opacity-1`)};
+      transform: ${({ open }) => (open ? 'translate(20px)' : 'none')};
+    }
   }
-
-  &:hover svg {
-    ${tw`fill-current`};
-  }
-`;
-
-export const CloseNavButton = styled(OpenNavButton)`
-  ${tw`absolute top-0 right-0 m-5`}
 `;

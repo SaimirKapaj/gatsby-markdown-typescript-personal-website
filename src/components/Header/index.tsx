@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 import MainNav from './MainNav';
+import Logo from 'components/Header/Logo';
 
-import { HeaderWrapper, Title } from './styles';
+import { HeaderBg, HeaderWrapper } from './styles';
 
 interface Props {
   siteTitle: string;
@@ -15,12 +15,12 @@ interface Props {
  * @param {Props} props
  */
 const Header: React.FC<Props> = ({ siteTitle }) => (
-  <HeaderWrapper>
-    <Link to="/">
-      <Title>{siteTitle}</Title>
-    </Link>
-    <MainNav />
-  </HeaderWrapper>
+  <HeaderBg>
+    <HeaderWrapper>
+      <Logo />
+      <MainNav />
+    </HeaderWrapper>
+  </HeaderBg>
 );
 
 Header.defaultProps = {
