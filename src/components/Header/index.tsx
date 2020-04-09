@@ -1,7 +1,7 @@
 import React from 'react';
 
 import MainNav from './MainNav';
-import Logo from 'components/Header/Logo';
+import Logo from './Logo';
 
 import { HeaderBg, HeaderWrapper } from './styles';
 
