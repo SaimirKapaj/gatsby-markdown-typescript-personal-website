@@ -5,6 +5,11 @@ interface Props {
   section?: boolean;
 }
 
+/**
+ * Container component
+ *
+ * @param {Props} props
+ */
 const Container = styled.div<Props>`
   ${tw`flex flex-wrap items-center max-w-screen-md mx-auto p-5`};
   ${({ section }) => section && tw`py-16`};

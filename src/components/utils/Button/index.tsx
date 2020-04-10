@@ -5,6 +5,11 @@ interface Props {
   primary?: boolean;
 }
 
+/**
+ * Button component
+ *
+ * @param {Props} props
+ */
 const Button = styled.button<Props>`
   outline: none !important;
   ${tw`py-2 px-8 rounded-full border-2 border-indigo-500`};
