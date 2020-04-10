@@ -33,7 +33,7 @@ const Layout: React.FC<Props> = ({ children }) => {
       <GlobalStyles />
       <Styled.Layout>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <Styled.MainWrapper>{children}</Styled.MainWrapper>
+        {children}
         <Footer />
       </Styled.Layout>
     </>

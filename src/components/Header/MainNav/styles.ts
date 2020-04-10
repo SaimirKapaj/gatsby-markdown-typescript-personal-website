@@ -8,7 +8,7 @@ interface MainNavProps {
 
 export const MainNav = styled.nav<MainNavProps>`
   ${tw`flex flex-col sm:flex-row bg-indigo-100 sm:w-auto w-full order-last sm:order-none my-4 sm:my-0`};
-  ${({ open }) => (open ? 'flex' : tw`hidden`)};
+  ${({ open }) => !open && tw`hidden`};
 `;
 
 export const MainNavItem = styled(Link)`
@@ -28,7 +28,7 @@ export const ToogleMainNav = styled.button<MainNavProps>`
     transition: 0.2s;
 
     &:first-child {
-      ${({ open }) => (open ? tw`-mb-px` : tw`mb-2 `)};
+      ${({ open }) => (open ? tw`-mb-px` : tw`mb-2`)};
       transform: ${({ open }) => (open ? 'rotate(45deg)' : 'none')};
     }
 

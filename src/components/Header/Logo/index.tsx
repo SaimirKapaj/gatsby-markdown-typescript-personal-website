@@ -7,7 +7,7 @@ import * as Styled from './styles';
 /**
  * Logo component
  */
-const Logo = () => {
+const Logo: React.FC = () => {
   const { site, placeholderImage } = useStaticQuery(graphql`
     query {
       site {
