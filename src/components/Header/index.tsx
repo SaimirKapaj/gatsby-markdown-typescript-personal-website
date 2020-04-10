@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Container from 'components/utils/Container';
+
 import MainNav from './MainNav';
 import Logo from './Logo';
 
@@ -16,10 +18,10 @@ interface Props {
  */
 const Header: React.FC<Props> = ({ siteTitle }) => (
   <Styled.Header>
-    <Styled.Wrapper>
+    <Container>
       <Logo />
       <MainNav />
-    </Styled.Wrapper>
+    </Container>
   </Styled.Header>
 );
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
+import Container from 'components/utils/Container';
 import Button from 'components/utils/Button';
 
 import * as Styled from './styles';
@@ -14,13 +15,13 @@ interface Props {
 
 const HeroBanner: React.FC<Props> = ({ title, description, linkTo, linkText }) => (
   <Styled.HeroBanner>
-    <Styled.Wrapper>
+    <Container section>
       <Styled.Title>{title}</Styled.Title>
       <Styled.Description>{description}</Styled.Description>
       <Link to={linkTo}>
         <Button primary>{linkText}</Button>
       </Link>
-    </Styled.Wrapper>
+    </Container>
   </Styled.HeroBanner>
 );
 
