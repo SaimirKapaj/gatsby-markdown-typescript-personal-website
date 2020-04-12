@@ -2,42 +2,45 @@ import styled from 'styled-components';
 import tw from 'tailwind.macro';
 import { Link } from 'gatsby';
 
-interface MainNavProps {
+interface StyledProps {
   open: boolean;
 }
 
-export const MainNav = styled.nav<MainNavProps>`
-  ${tw`flex flex-col sm:flex-row bg-indigo-100 sm:w-auto w-full order-last sm:order-none my-4 sm:my-0`};
+export const MainNav = styled.nav<StyledProps>`
+  ${tw`flex flex-col sm:flex-row sm:w-auto w-full order-last sm:order-none my-4 sm:my-0`};
   ${({ open }) => !open && tw`hidden`};
 `;
 
 export const MainNavItem = styled(Link)`
-  ${tw`mr-8 mt-3 sm:mt-0 text-gray-900 hover:text-indigo-600 text-base font-light`};
+  ${tw`mr-8 mt-3 sm:mt-0 text-indigo-900 hover:text-indigo-900 border-b border-transparent hover:border-teal-400`};
+  width: max-content;
 
   &.active {
-    ${tw`text-indigo-600`};
+    ${tw`border-teal-400`};
   }
 `;
 
-export const ToogleMainNav = styled.button<MainNavProps>`
-  ${tw`flex flex-col items-center justify-center cursor-pointer w-6 h-5`};
+export const ToogleMainNav = styled.button<StyledProps>`
+  ${tw`flex flex-col items-end justify-center cursor-pointer w-6 h-5`};
   outline: none !important;
 
   span {
-    ${tw`bg-gray-900 inline-block w-6 h-px`};
+    ${tw`bg-indigo-500 inline-block w-6 h-px`};
     transition: 0.2s;
 
     &:first-child {
-      ${({ open }) => (open ? tw`-mb-px` : tw`mb-2`)};
+      ${({ open }) => (open ? tw`-mb-px` : tw`mb-1`)};
       transform: ${({ open }) => (open ? 'rotate(45deg)' : 'none')};
     }
 
     &:last-child {
-      ${({ open }) => (open ? tw`-mt-px` : tw`mt-2`)};
+      ${({ open }) => (open ? tw`-mt-px` : tw`mt-1`)};
       transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'none')};
     }
 
     &:nth-child(2) {
+      ${tw`bg-teal-400 inline-block w-8 h-px`};
+
       ${({ open }) => (open ? tw`opacity-0` : tw`opacity-1`)};
       transform: ${({ open }) => (open ? 'translate(20px)' : 'none')};
     }
