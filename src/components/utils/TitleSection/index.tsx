@@ -7,6 +7,11 @@ interface Props extends StyledProps {
   text: string;
 }
 
+/**
+ * TitleSection component
+ *
+ * @param {Props}
+ */
 const TitleSection: React.FC<Props> = ({ center, text }) => (
   <Styled.TitleSection>
     <Styled.Text center={center}>{text}</Styled.Text>

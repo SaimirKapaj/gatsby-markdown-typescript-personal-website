@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import tw from 'tailwind.macro';
 
 export const HeroBanner = styled.section`
-  ${tw`bg-indigo-100`};
+  ${tw`bg-gray-100`};
 `;
 
 export const Title = styled.h1`
@@ -10,5 +10,5 @@ export const Title = styled.h1`
 `;
 
 export const Description = styled.p`
-  ${tw`mt-3 mb-8`};
+  ${tw`mb-8`};
 `;
