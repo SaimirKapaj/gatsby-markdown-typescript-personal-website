@@ -12,11 +12,11 @@ interface Props {
  */
 const Button = styled.button<Props>`
   outline: none !important;
-  ${tw`py-2 px-8 rounded-full border-2 border-indigo-500`};
+  ${tw`py-2 px-8 rounded-full border border-teal-300 text-indigo-900`};
   ${({ primary }) =>
     primary
-      ? tw`bg-indigo-500 hover:bg-indigo-600 hover:border-indigo-600 text-white`
-      : tw`text-indigo-600 hover:bg-indigo-500 hover:text-white`};
+      ? tw`bg-teal-300 hover:bg-teal-200 hover:border-teal-200`
+      : tw`text-indigo-600 hover:text-indigo-900 hover:bg-teal-300`};
 `;
 
 export default Button;
