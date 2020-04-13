@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import tw from 'tailwind.macro';
 
 export interface StyledProps {
-  section: boolean;
+  section?: boolean;
 }
 
 export const Container = styled.div<StyledProps>`
