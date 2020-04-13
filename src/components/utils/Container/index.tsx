@@ -1,8 +1,9 @@
-import styled from 'styled-components';
-import tw from 'tailwind.macro';
+import React from 'react';
 
-interface Props {
-  section?: boolean;
+import * as Styled from './styles';
+
+interface Props extends Styled.StyledProps {
+  children: React.ReactNode;
 }
 
 /**
@@ -10,9 +11,8 @@ interface Props {
  *
  * @param {Props} props
  */
-const Container = styled.div<Props>`
-  ${tw`flex flex-wrap items-center max-w-screen-md mx-auto p-5`};
-  ${({ section }) => section && tw`py-16`};
-`;
+const Container: React.FC<Props> = ({ section, children }) => (
+  <Styled.Container section={section}>{children}</Styled.Container>
+);
 
 export default Container;
