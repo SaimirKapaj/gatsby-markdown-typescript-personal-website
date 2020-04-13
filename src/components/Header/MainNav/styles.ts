@@ -12,11 +12,24 @@ export const MainNav = styled.nav<StyledProps>`
 `;
 
 export const MainNavItem = styled(Link)`
-  ${tw`mr-8 mt-3 sm:mt-0 text-indigo-900 hover:text-indigo-900 border-b border-transparent hover:border-teal-400`};
+  ${tw`relative mr-8 mt-3 sm:mt-0 text-indigo-900 border-b border-transparent hover:text-indigo-900 `};
   width: max-content;
 
   &.active {
     ${tw`border-teal-400`};
+  }
+
+  &:before {
+    ${tw`absolute w-full bg-teal-400 h-px left-0 invisible`};
+    content: '';
+    bottom: -1px;
+    transform: scaleX(0);
+    transition: 0.2s;
+  }
+
+  &:hover:before {
+    ${tw`visible`};
+    transform: scaleX(1);
   }
 `;
 
