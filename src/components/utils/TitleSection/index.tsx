@@ -4,7 +4,8 @@ import * as Styled from './styles';
 import { StyledProps } from './styles';
 
 interface Props extends StyledProps {
-  text: string;
+  title: string;
+  subtitle?: string;
 }
 
 /**
@@ -12,9 +13,10 @@ interface Props extends StyledProps {
  *
  * @param {Props}
  */
-const TitleSection: React.FC<Props> = ({ center, text }) => (
+const TitleSection: React.FC<Props> = ({ center, title, subtitle }) => (
   <Styled.TitleSection>
-    <Styled.Text center={center}>{text}</Styled.Text>
+    {subtitle && <Styled.SubTitle center={center}>{subtitle}</Styled.SubTitle>}
+    <Styled.Title center={center}>{title}</Styled.Title>
     <Styled.Separator center={center} />
   </Styled.TitleSection>
 );

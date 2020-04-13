@@ -9,6 +9,7 @@ import * as Styled from './styles';
 
 interface Props {
   title: string;
+  subtitle?: string;
   description: React.ReactNode;
   linkTo: string;
   linkText: string;
@@ -19,10 +20,10 @@ interface Props {
  *
  * @param {Props} props
  */
-const HeroBanner: React.FC<Props> = ({ title, description, linkTo, linkText }) => (
+const HeroBanner: React.FC<Props> = ({ title, subtitle, description, linkTo, linkText }) => (
   <Styled.HeroBanner>
     <Container section>
-      <TitleSection text={title} />
+      <TitleSection title={title} subtitle={subtitle} />
       <Styled.Description>{description}</Styled.Description>
       <Link to={linkTo}>
         <Button primary>{linkText}</Button>
