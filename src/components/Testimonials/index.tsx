@@ -4,12 +4,12 @@ import Img from 'gatsby-image';
 
 import Container from 'components/utils/Container';
 import TitleSection from 'components/utils/TitleSection';
-import Carousel from 'components/Carousel';
+import Carousel from 'components/utils/Carousel';
 import FormatHtml from 'components/utils/FormatHtml';
 
-import * as Styled from './styles';
-
 import { SectionTitle, ImageSharpFluid } from 'helpers/definitions';
+
+import * as Styled from './styles';
 
 interface Testimonial {
   node: {
