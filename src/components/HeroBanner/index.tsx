@@ -1,35 +1,46 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 
-import Container from 'components/utils/Container';
-import Button from 'components/utils/Button';
-import TitleSection from 'components/utils/TitleSection';
+import Banner from 'components/utils/Banner';
 
-import * as Styled from './styles';
+import { SectionTitle } from 'helpers/definitions';
 
-interface Props {
-  title: string;
-  subtitle?: string;
-  description: React.ReactNode;
+interface SectionHeroBanner extends SectionTitle {
+  content: string;
   linkTo: string;
   linkText: string;
 }
 
-/**
- * Hero Banner component
- *
- * @param {Props} props
- */
-const HeroBanner: React.FC<Props> = ({ title, subtitle, description, linkTo, linkText }) => (
-  <Styled.HeroBanner>
-    <Container section>
-      <TitleSection title={title} subtitle={subtitle} />
-      <Styled.Description>{description}</Styled.Description>
-      <Link to={linkTo}>
-        <Button primary>{linkText}</Button>
-      </Link>
-    </Container>
-  </Styled.HeroBanner>
-);
+const HeroBanner: React.FC = () => {
+  const { site } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          sections {
+            heroBanner {
+              title
+              subtitle
+              content
+              linkTo
+              linkText
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const heroBanner: SectionHeroBanner = site.siteMetadata.sections.heroBanner;
+
+  return (
+    <Banner
+      title={heroBanner.title}
+      subtitle={heroBanner.subtitle}
+      content={heroBanner.content}
+      linkTo={heroBanner.linkTo}
+      linkText={heroBanner.linkText}
+    />
+  );
+};
 
 export default HeroBanner;
