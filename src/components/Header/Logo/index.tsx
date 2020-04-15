@@ -4,6 +4,8 @@ import Img from 'gatsby-image';
 
 import * as Styled from './styles';
 
+import { ImageSharpFluid } from 'helpers/definitions';
+
 /**
  * Logo component
  */
@@ -25,12 +27,15 @@ const Logo: React.FC = () => {
     }
   `);
 
+  const logoTitle: string = site.siteMetadata.title;
+  const logoImage: ImageSharpFluid = placeholderImage.childImageSharp.fluid;
+
   return (
     <Styled.Logo to="/">
       <Styled.Image>
-        <Img fluid={placeholderImage.childImageSharp.fluid} alt={site.siteMetadata.title} />
+        <Img fluid={logoImage} alt={logoTitle} />
       </Styled.Image>
-      <Styled.Text>{site.siteMetadata.title}</Styled.Text>
+      <Styled.Text>{logoTitle}</Styled.Text>
     </Styled.Logo>
   );
 };
