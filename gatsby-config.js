@@ -1,8 +1,8 @@
+const siteData = require('./siteData');
+
 module.exports = {
   siteMetadata: {
-    title: `John Doe`,
-    description: `Gatsby Personal Website Starter, using Typescript, Styled Components and Tailwindcss.`,
-    author: `Saimir Kapaj`
+    ...siteData
   },
   plugins: [
     `gatsby-plugin-typescript`,
@@ -18,7 +18,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content`,
-        path: `${__dirname}/src/content`
+        path: `${__dirname}/src/data`
       }
     },
     {
@@ -43,8 +43,8 @@ module.exports = {
         name: `gatsby-personal-website-starter`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#667EEA`,
-        theme_color: `#667EEA`,
+        background_color: `#81e6d9`,
+        theme_color: `#81e6d9`,
         display: `minimal-ui`,
         icon: `src/assets/images/gatsby-icon.png`
       }
