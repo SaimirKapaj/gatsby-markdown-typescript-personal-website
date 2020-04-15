@@ -1,0 +1,18 @@
+.slick-slider {
+  max-width: 100%;
+  padding-bottom: 2rem;
+}
+
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before {
+  font-size: 12px !important;
+  opacity: 0.5 !important;
+}
+
+.slick-dots li button:before {
+  color: #5a67d8 !important;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1 !important;
+}
