@@ -1,3 +1,6 @@
 export type ObjectType = Record<string, any>;
 
-// below add additional types / generics
+export interface SectionTitle {
+  title: string;
+  subtitle: string;
+}
