@@ -1,13 +1,13 @@
 import React from 'react';
-import { FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
 
-import Icon from 'components/utils/Icon';
+import Icon, { IconProps } from 'components/utils/Icon';
 
 import * as Styled from './styles';
 
-interface Props extends FontAwesomeIconProps {
+interface Props {
   title: string;
-  description: React.ReactNode;
+  content: React.ReactNode;
+  icon: IconProps;
 }
 
 /**
@@ -15,15 +15,15 @@ interface Props extends FontAwesomeIconProps {
  *
  * @param {Props} props
  */
-const InfoBlock: React.FC<Props> = ({ icon, title, description }) => (
+const InfoBlock: React.FC<Props> = ({ icon, title, content }) => (
   <Styled.InfoBlock>
     <Styled.Icon>
       <Icon icon={icon} />
     </Styled.Icon>
-    <Styled.Content>
+    <Styled.Wrapper>
       <Styled.Title>{title}</Styled.Title>
-      <Styled.Description>{description}</Styled.Description>
-    </Styled.Content>
+      <Styled.Content>{content}</Styled.Content>
+    </Styled.Wrapper>
   </Styled.InfoBlock>
 );
 

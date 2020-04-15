@@ -10,12 +10,12 @@ export const Icon = styled.span`
   ${tw`flex items-center justify-center w-10 h-10 text-indigo-500 border border-teal-400 rounded-full mb-2`};
 `;
 
-export const Content = styled.div``;
+export const Wrapper = styled.div``;
 
 export const Title = styled.h3`
   ${tw`text-md mt-1 font-semibold`};
 `;
 
-export const Description = styled.p`
+export const Content = styled.p`
   ${tw`mt-1`};
 `;
