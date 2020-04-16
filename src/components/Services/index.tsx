@@ -23,16 +23,12 @@ interface Service {
 }
 
 const Services: React.FC = () => {
-  const { site, allMarkdownRemark } = useStaticQuery(graphql`
+  const { markdownRemark, allMarkdownRemark } = useStaticQuery(graphql`
     query {
-      site {
-        siteMetadata {
-          sections {
-            services {
-              title
-              subtitle
-            }
-          }
+      markdownRemark(frontmatter: { category: { eq: "testimonials section" } }) {
+        frontmatter {
+          title
+          subtitle
         }
       }
       allMarkdownRemark(filter: { frontmatter: { category: { eq: "services" } } }, sort: { fields: fileAbsolutePath }) {
@@ -50,7 +46,7 @@ const Services: React.FC = () => {
     }
   `);
 
-  const sectionTitle: SectionTitle = site.siteMetadata.sections.services;
+  const sectionTitle: SectionTitle = markdownRemark.frontmatter;
   const services: Service[] = allMarkdownRemark.edges;
 
   return (
