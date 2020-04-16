@@ -12,25 +12,21 @@ interface SectionHeroBanner extends SectionTitle {
 }
 
 const HeroBanner: React.FC = () => {
-  const { site } = useStaticQuery(graphql`
+  const { markdownRemark } = useStaticQuery(graphql`
     query {
-      site {
-        siteMetadata {
-          sections {
-            heroBanner {
-              title
-              subtitle
-              content
-              linkTo
-              linkText
-            }
-          }
+      markdownRemark(frontmatter: { category: { eq: "hero section" } }) {
+        frontmatter {
+          title
+          subtitle
+          content
+          linkTo
+          linkText
         }
       }
     }
   `);
 
-  const heroBanner: SectionHeroBanner = site.siteMetadata.sections.heroBanner;
+  const heroBanner: SectionHeroBanner = markdownRemark.frontmatter;
 
   return (
     <Banner
