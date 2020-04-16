@@ -6,6 +6,6 @@ export interface StyledProps {
 }
 
 export const Container = styled.div<StyledProps>`
-  ${tw`flex flex-wrap items-center max-w-screen-md w-full mx-auto p-5`};
+  ${tw`flex flex-wrap max-w-screen-md w-full mx-auto p-5`};
   ${({ section }) => section && tw`py-8 sm:py-16`};
 `;
