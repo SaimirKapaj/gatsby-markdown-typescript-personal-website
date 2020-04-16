@@ -11,6 +11,10 @@ interface Props extends Styled.StyledProps {
  *
  * @param {Props} props
  */
-const Button: React.FC<Props> = ({ primary, children }) => <Styled.Button primary={primary}>{children}</Styled.Button>;
+const Button: React.FC<Props> = ({ primary, block, children }) => (
+  <Styled.Button primary={primary} block={block}>
+    {children}
+  </Styled.Button>
+);
 
 export default Button;
