@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import tw from 'tailwind.macro';
 
 export const Testimonials = styled.div`
-  ${tw`bg-gray-100`};
+  ${tw`border-t border-gray-300`};
 `;
 
 export const Testimonial = styled.div`

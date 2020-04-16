@@ -27,16 +27,12 @@ interface Testimonial {
 }
 
 const Testimonials: React.FC = () => {
-  const { site, allMarkdownRemark } = useStaticQuery(graphql`
+  const { markdownRemark, allMarkdownRemark } = useStaticQuery(graphql`
     query {
-      site {
-        siteMetadata {
-          sections {
-            testimonials {
-              title
-              subtitle
-            }
-          }
+      markdownRemark(frontmatter: { category: { eq: "testimonials section" } }) {
+        frontmatter {
+          title
+          subtitle
         }
       }
       allMarkdownRemark(filter: { frontmatter: { category: { eq: "testimonials" } } }) {
@@ -60,7 +56,7 @@ const Testimonials: React.FC = () => {
     }
   `);
 
-  const sectionTitle: SectionTitle = site.siteMetadata.sections.testimonials;
+  const sectionTitle: SectionTitle = markdownRemark.frontmatter;
   const testimonials: Testimonial[] = allMarkdownRemark.edges;
 
   return (
