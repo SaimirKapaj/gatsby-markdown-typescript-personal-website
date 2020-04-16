@@ -20,7 +20,7 @@ export const SubTitle = styled.h4<StyledProps>`
 `;
 
 export const Separator = styled.h2<StyledProps>`
-  ${tw`relative w-2 h-8 mb-6 -mt-2 ml-1`};
+  ${tw`relative w-2 h-8 mb-6 -mt-2`};
   ${({ center }) => center && tw`mx-auto`};
 
   &:before {
