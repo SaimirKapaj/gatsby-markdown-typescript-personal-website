@@ -9,4 +9,8 @@ export default createGlobalStyle`
   a {
     ${tw`text-indigo-600 hover:text-indigo-700`};
   }
+
+  p + p {
+    ${tw`mt-3`};
+  }
 `;
