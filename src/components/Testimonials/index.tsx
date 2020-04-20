@@ -60,34 +60,32 @@ const Testimonials: React.FC = () => {
   const testimonials: Testimonial[] = allMarkdownRemark.edges;
 
   return (
-    <Styled.Testimonials>
-      <Container section>
-        <TitleSection title={sectionTitle.title} subtitle={sectionTitle.subtitle} center />
-        <Styled.Wrapper>
-          <Carousel>
-            {testimonials.map((item) => {
-              const {
-                id,
-                html,
-                frontmatter: { cover, title }
-              } = item.node;
+    <Container section>
+      <TitleSection title={sectionTitle.title} subtitle={sectionTitle.subtitle} center />
+      <Styled.Wrapper>
+        <Carousel>
+          {testimonials.map((item) => {
+            const {
+              id,
+              html,
+              frontmatter: { cover, title }
+            } = item.node;
 
-              return (
-                <div key={id}>
-                  <Styled.Testimonial>
-                    <Styled.Image>
-                      <Img fluid={cover.childImageSharp.fluid} alt={title} />
-                    </Styled.Image>
-                    <Styled.Title>{title}</Styled.Title>
-                    <FormatHtml content={html} />
-                  </Styled.Testimonial>
-                </div>
-              );
-            })}
-          </Carousel>
-        </Styled.Wrapper>
-      </Container>
-    </Styled.Testimonials>
+            return (
+              <div key={id}>
+                <Styled.Testimonial>
+                  <Styled.Image>
+                    <Img fluid={cover.childImageSharp.fluid} alt={title} />
+                  </Styled.Image>
+                  <Styled.Title>{title}</Styled.Title>
+                  <FormatHtml content={html} />
+                </Styled.Testimonial>
+              </div>
+            );
+          })}
+        </Carousel>
+      </Styled.Wrapper>
+    </Container>
   );
 };
 
