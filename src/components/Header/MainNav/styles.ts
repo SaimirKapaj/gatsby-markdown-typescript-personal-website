@@ -7,12 +7,12 @@ interface StyledProps {
 }
 
 export const MainNav = styled.nav<StyledProps>`
-  ${tw`flex flex-col sm:flex-row sm:w-auto w-full order-last sm:order-none my-4 sm:my-0`};
-  ${({ open }) => !open && tw`hidden`};
+  ${tw`sm:flex flex-col sm:flex-row sm:w-auto w-full order-last sm:order-none my-4 sm:my-0 hidden`};
+  ${({ open }) => open && tw`flex`};
 `;
 
 export const MainNavItem = styled(Link)`
-  ${tw`relative mr-8 mt-3 sm:mt-0 text-indigo-900 border-b border-transparent hover:text-indigo-900 `};
+  ${tw`relative text-indigo-900 border-b border-transparent hover:text-indigo-900 ml-0 sm:ml-8 mt-3 sm:mt-0`};
   width: max-content;
 
   &.active {
@@ -34,7 +34,7 @@ export const MainNavItem = styled(Link)`
 `;
 
 export const ToogleMainNav = styled.button<StyledProps>`
-  ${tw`flex flex-col items-end justify-center cursor-pointer w-6 h-5`};
+  ${tw`flex flex-col items-end justify-center cursor-pointer w-6 h-5 sm:hidden`};
   outline: none !important;
 
   span {
