@@ -1,8 +1,8 @@
-const siteData = require('./siteData');
-
 module.exports = {
   siteMetadata: {
-    ...siteData
+    title: `Gatsby.JS`,
+    description: `Gatsby Personal Website Starter, using Typescript, Styled Components and Tailwindcss.`,
+    author: `Saimir Kapaj`
   },
   plugins: [
     `gatsby-plugin-typescript`,
