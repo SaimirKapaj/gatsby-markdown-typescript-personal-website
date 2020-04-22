@@ -62,7 +62,7 @@ const Testimonials: React.FC = () => {
   return (
     <Container section>
       <TitleSection title={sectionTitle.title} subtitle={sectionTitle.subtitle} center />
-      <Styled.Wrapper>
+      <Styled.Testimonials>
         <Carousel>
           {testimonials.map((item) => {
             const {
@@ -72,19 +72,17 @@ const Testimonials: React.FC = () => {
             } = item.node;
 
             return (
-              <div key={id}>
-                <Styled.Testimonial>
-                  <Styled.Image>
-                    <Img fluid={cover.childImageSharp.fluid} alt={title} />
-                  </Styled.Image>
-                  <Styled.Title>{title}</Styled.Title>
-                  <FormatHtml content={html} />
-                </Styled.Testimonial>
-              </div>
+              <Styled.Testimonial key={id}>
+                <Styled.Image>
+                  <Img fluid={cover.childImageSharp.fluid} alt={title} />
+                </Styled.Image>
+                <Styled.Title>{title}</Styled.Title>
+                <FormatHtml content={html} />
+              </Styled.Testimonial>
             );
           })}
         </Carousel>
-      </Styled.Wrapper>
+      </Styled.Testimonials>
     </Container>
   );
 };

@@ -10,11 +10,6 @@ interface Props extends Styled.StyledProps {
   icon: IconProps;
 }
 
-/**
- * InfoBlock component
- *
- * @param {Props} props
- */
 const InfoBlock: React.FC<Props> = ({ icon, title, content, center }) => (
   <Styled.InfoBlock center={center}>
     <Styled.Icon>

@@ -19,11 +19,6 @@ const settings = {
   slidesToScroll: 1
 };
 
-/**
- * Carousel component
- *
- * @param {Props} props
- */
 const Carousel: React.FC<Props> = ({ children }) => (
   <>
     <Helmet>

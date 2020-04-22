@@ -4,11 +4,6 @@ interface Props {
   content: any;
 }
 
-/**
- * FormatHtml component
- *
- * @param {Props} props
- */
 const FormatHtml: React.FC<Props> = ({ content }) => (
   <span
     className="format-html"

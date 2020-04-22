@@ -4,28 +4,26 @@ import Container from 'components/utils/Container';
 
 import * as Styled from './styles';
 
-/**
- * Footer component
- */
-const Footer = () => (
-  <Container>
-    <Styled.Footer>
-      <div>
-        Built with{' '}
-        <a href="https://www.gatsbyjs.org" rel="noreferrer noopener" target="_blank">
-          Gatsby
-        </a>{' '}
-        by <span className="font-semibold">Saimir Kapaj</span>
-      </div>
-      <a
-        href="https://github.com/SaimirKapaj/gatsby-redux-toolkit-typescript-starter"
-        rel="noreferrer noopener"
-        target="_blank"
-      >
-        GitHub
-      </a>
-    </Styled.Footer>
-  </Container>
+const Footer: React.FC = () => (
+  <Styled.Footer>
+    <Container>
+      <Styled.Links>
+        <Styled.Link href="/" rel="noreferrer noopener" target="_blank">
+          GitHub
+        </Styled.Link>
+        <Styled.Link
+          href="https://github.com/SaimirKapaj/gatsby-personal-website-markdown-typescript"
+          rel="noreferrer noopener"
+          target="_blank"
+        >
+          Twitter
+        </Styled.Link>
+        <Styled.Link href="/" rel="noreferrer noopener" target="_blank">
+          Behance
+        </Styled.Link>
+      </Styled.Links>
+    </Container>
+  </Styled.Footer>
 );
 
 export default Footer;

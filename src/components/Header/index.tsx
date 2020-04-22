@@ -9,11 +9,6 @@ interface Props {
   siteTitle: string;
 }
 
-/**
- * Header component
- *
- * @param {Props} props
- */
 const Header: React.FC<Props> = ({ siteTitle }) => (
   <Styled.Header>
     <Styled.Wrapper>

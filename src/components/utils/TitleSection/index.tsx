@@ -8,11 +8,6 @@ interface Props extends StyledProps {
   subtitle?: string;
 }
 
-/**
- * TitleSection component
- *
- * @param {Props}
- */
 const TitleSection: React.FC<Props> = ({ center, title, subtitle }) => (
   <Styled.TitleSection>
     {subtitle && <Styled.SubTitle center={center}>{title}</Styled.SubTitle>}

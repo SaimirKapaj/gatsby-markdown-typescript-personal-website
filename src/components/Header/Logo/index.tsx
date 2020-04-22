@@ -6,9 +6,6 @@ import * as Styled from './styles';
 
 import { ImageSharpFluid } from 'helpers/definitions';
 
-/**
- * Logo component
- */
 const Logo: React.FC = () => {
   const { site, placeholderImage } = useStaticQuery(graphql`
     query {

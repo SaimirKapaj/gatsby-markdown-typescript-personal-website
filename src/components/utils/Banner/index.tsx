@@ -15,11 +15,6 @@ interface Props {
   linkText: string;
 }
 
-/**
- * Banner component
- *
- * @param {Props} props
- */
 const Banner: React.FC<Props> = ({ title, subtitle, content, linkTo, linkText }) => (
   <Styled.Banner>
     <Container section>

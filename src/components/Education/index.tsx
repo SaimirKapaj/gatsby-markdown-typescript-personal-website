@@ -64,7 +64,6 @@ const Education: React.FC = () => {
           frontmatter: { university, degree, startDate, endDate }
         } = item.node;
 
-        console.log(endDate);
         return (
           <Timeline
             key={id}

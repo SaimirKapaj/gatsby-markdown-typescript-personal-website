@@ -25,7 +25,7 @@ interface Service {
 const Services: React.FC = () => {
   const { markdownRemark, allMarkdownRemark } = useStaticQuery(graphql`
     query {
-      markdownRemark(frontmatter: { category: { eq: "testimonials section" } }) {
+      markdownRemark(frontmatter: { category: { eq: "services section" } }) {
         frontmatter {
           title
           subtitle

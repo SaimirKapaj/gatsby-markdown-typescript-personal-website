@@ -21,7 +21,7 @@ interface Contact {
   };
 }
 
-const ConctactInfo = () => {
+const ConctactInfo: React.FC = () => {
   const { markdownRemark, allMarkdownRemark } = useStaticQuery(graphql`
     query {
       markdownRemark(frontmatter: { category: { eq: "contact section" } }) {
