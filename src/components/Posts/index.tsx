@@ -3,8 +3,8 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Link from 'gatsby-link';
 
-import Container from 'components/utils/Container';
-import TitleSection from 'components/utils/TitleSection';
+import Container from 'components/ui/Container';
+import TitleSection from 'components/ui/TitleSection';
 
 import { SectionTitle, ImageSharpFluid } from 'helpers/definitions';
 

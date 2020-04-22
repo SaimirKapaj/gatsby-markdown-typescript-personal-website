@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Icon, { IconProps } from 'components/utils/Icon';
+import Icon, { IconProps } from 'components/ui/Icon';
 
 import * as Styled from './styles';
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import Container from 'components/utils/Container';
-import TitleSection from 'components/utils/TitleSection';
-import ProgressBar from 'components/ProgressBar';
+import Container from 'components/ui/Container';
+import TitleSection from 'components/ui/TitleSection';
+import ProgressBar from 'components/ui/ProgressBar';
 
 import { SectionTitle } from 'helpers/definitions';
 

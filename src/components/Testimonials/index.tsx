@@ -2,9 +2,9 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-import Container from 'components/utils/Container';
-import TitleSection from 'components/utils/TitleSection';
-import Carousel from 'components/utils/Carousel';
+import Container from 'components/ui/Container';
+import TitleSection from 'components/ui/TitleSection';
+import Carousel from 'components/ui/Carousel';
 import FormatHtml from 'components/utils/FormatHtml';
 
 import { SectionTitle, ImageSharpFluid } from 'helpers/definitions';

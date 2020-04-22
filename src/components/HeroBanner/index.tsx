@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import Banner from 'components/utils/Banner';
+import Banner from 'components/ui/Banner';
 
 import { SectionTitle } from 'helpers/definitions';
 
