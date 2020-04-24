@@ -2,6 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Link from 'gatsby-link';
+import { motion } from 'framer-motion';
 
 import Container from 'components/ui/Container';
 import TitleSection from 'components/ui/TitleSection';
@@ -86,21 +87,23 @@ const Posts: React.FC = () => {
           return (
             <Styled.Post key={id}>
               <Link to={slug}>
-                <Styled.Card>
-                  <Styled.Image>
-                    <Img fluid={cover.childImageSharp.fluid} alt={title} />
-                  </Styled.Image>
-                  <Styled.Content>
-                    <Styled.Date>{date}</Styled.Date>
-                    <Styled.Title>{title}</Styled.Title>
-                    <Styled.Description>{description}</Styled.Description>
-                  </Styled.Content>
-                  <Styled.Tags>
-                    {tags.map((item) => (
-                      <Styled.Tag key={item}>{item}</Styled.Tag>
-                    ))}
-                  </Styled.Tags>
-                </Styled.Card>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 1 }}>
+                  <Styled.Card>
+                    <Styled.Image>
+                      <Img fluid={cover.childImageSharp.fluid} alt={title} />
+                    </Styled.Image>
+                    <Styled.Content>
+                      <Styled.Date>{date}</Styled.Date>
+                      <Styled.Title>{title}</Styled.Title>
+                      <Styled.Description>{description}</Styled.Description>
+                    </Styled.Content>
+                    <Styled.Tags>
+                      {tags.map((item) => (
+                        <Styled.Tag key={item}>{item}</Styled.Tag>
+                      ))}
+                    </Styled.Tags>
+                  </Styled.Card>
+                </motion.div>
               </Link>
             </Styled.Post>
           );
