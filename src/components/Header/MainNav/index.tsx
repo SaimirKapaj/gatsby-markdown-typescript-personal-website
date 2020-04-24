@@ -33,7 +33,12 @@ const MainNav: React.FC = () => {
     <>
       <Styled.MainNav open={open}>
         {mainNavItems.map((item, index) => (
-          <Styled.MainNavItem key={`nav-item-${index}`} to={item.slug} activeClassName="active">
+          <Styled.MainNavItem
+            key={`nav-item-${index}`}
+            to={item.slug}
+            activeClassName="active"
+            whileTap={{ scale: 0.9 }}
+          >
             {item.title}
           </Styled.MainNavItem>
         ))}
