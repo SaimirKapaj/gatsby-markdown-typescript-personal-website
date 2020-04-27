@@ -12,7 +12,7 @@ const Footer: React.FC = () => (
           GitHub
         </Styled.Link>
         <Styled.Link
-          href="https://github.com/SaimirKapaj/gatsby-personal-website-markdown-typescript"
+          href="https://github.com/SaimirKapaj/gatsby-markdown-typescript-personal-website"
           rel="noreferrer noopener"
           target="_blank"
         >
