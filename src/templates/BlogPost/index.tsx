@@ -36,8 +36,6 @@ const BlogPost: React.FC<Props> = ({ data, pageContext }) => {
   const post = data.markdownRemark;
   const { previous, next } = pageContext;
 
-  console.log(pageContext);
-
   return (
     <Layout>
       <SEO title={post.frontmatter.title} />
