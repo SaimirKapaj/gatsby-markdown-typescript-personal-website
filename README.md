@@ -10,7 +10,7 @@ This is a personal website / blog using [Gatsby](https://www.gatsbyjs.org/), [Ma
 
 1.  **Create a Gatsby site.**
 
-    Use the Gatsby CLI to create a new site, using the Redux-Toolkit Typescript Starter.
+    Use the Gatsby CLI to create a new site, using the Gatsby Markdown Typescript Personal Website Starter.
 
     ```shell
     gatsby new my-site-name https://github.com/SaimirKapaj/gatsby-markdown-typescript-personal-website
