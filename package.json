@@ -1,7 +1,7 @@
 {
   "name": "gatsby-personal-website-starter",
   "private": true,
-  "description": "Gatsby Personal Website Starter, using Typescript, Styled Components and Tailwindcss.",
+  "description": "Gatsby Markdown Personal Website Starter, using Typescript, Styled Components, Tailwindcss and Framer Motion.",
   "version": "0.1.0",
   "author": "Saimir Kapaj",
   "dependencies": {
