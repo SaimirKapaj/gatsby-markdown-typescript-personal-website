@@ -29,7 +29,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const res = await graphql(`
     query {
       allMarkdownRemark(
-        filter: { frontmatter: { category: { eq: "blog" } } }
+        filter: { frontmatter: { category: { eq: "blog" }, published: { eq: true } } }
         sort: { fields: frontmatter___date, order: DESC }
       ) {
         edges {
