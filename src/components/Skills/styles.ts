@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import tw from 'tailwind.macro';
+import tw from 'twin.macro';
 
 export const Skills = styled.div`
   ${tw`flex flex-wrap w-full`};

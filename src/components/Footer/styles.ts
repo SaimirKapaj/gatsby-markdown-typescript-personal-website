@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import tw from 'tailwind.macro';
+import tw from 'twin.macro';
 
 export const Footer = styled.footer`
   ${tw`border-t border-gray-200 py-4`};
