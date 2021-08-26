@@ -30,7 +30,7 @@ const ConctactInfo: React.FC = () => {
           subtitle
         }
       }
-      allMarkdownRemark(filter: { frontmatter: { category: { eq: "contact" } } }, sort: { fields: fileAbsolutePath }) {
+      allMarkdownRemark(filter: { frontmatter: { category: { eq: "contact" } } }, sort: { fields: frontmatter___title }) {
         edges {
           node {
             id

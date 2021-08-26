@@ -30,7 +30,7 @@ const Services: React.FC = () => {
           subtitle
         }
       }
-      allMarkdownRemark(filter: { frontmatter: { category: { eq: "services" } } }, sort: { fields: fileAbsolutePath }) {
+      allMarkdownRemark(filter: { frontmatter: { category: { eq: "services" } } }, sort: { fields: frontmatter___title }) {
         edges {
           node {
             id
