@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import tw from 'tailwind.macro';
+import tw from 'twin.macro';
 
 export const Timeline = styled.div`
   ${tw`flex flex-col sm:flex-row w-full p-4 relative border-l border-indigo-200`};

@@ -28,7 +28,7 @@ const Skills: React.FC = () => {
           subtitle
         }
       }
-      allMarkdownRemark(filter: { frontmatter: { category: { eq: "skills" } } }, sort: { fields: fileAbsolutePath }) {
+      allMarkdownRemark(filter: { frontmatter: { category: { eq: "skills" } } }, sort: { fields: frontmatter___title }) {
         edges {
           node {
             id

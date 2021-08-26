@@ -32,7 +32,7 @@ const Education: React.FC = () => {
       }
       allMarkdownRemark(
         filter: { frontmatter: { category: { eq: "education" } } }
-        sort: { order: DESC, fields: fileAbsolutePath }
+        sort: { order: DESC, fields: frontmatter___title }
       ) {
         edges {
           node {

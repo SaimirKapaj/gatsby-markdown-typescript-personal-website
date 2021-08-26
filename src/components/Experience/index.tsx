@@ -32,7 +32,7 @@ const Experience: React.FC = () => {
       }
       allMarkdownRemark(
         filter: { frontmatter: { category: { eq: "experiences" } } }
-        sort: { order: DESC, fields: fileAbsolutePath }
+        sort: { order: DESC, fields: frontmatter___title }
       ) {
         edges {
           node {
