@@ -1,4 +1,4 @@
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
 
 module.exports = {
   theme: {
@@ -8,10 +8,10 @@ module.exports = {
         indigo: colors.indigo
       },
       fontSize: {
-        'md': '1.125rem',
+        md: '1.125rem'
       },
       boxShadow: {
-        'outline': '0 0 0 3px rgba(66, 153, 225, 0.5)'
+        outline: '0 0 0 3px rgba(66, 153, 225, 0.5)'
       }
     }
   },
